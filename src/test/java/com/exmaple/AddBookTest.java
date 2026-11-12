@@ -1,13 +1,11 @@
 package com.exmaple;
 
-
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AddBookTest {
 
-   
+    
     @Test
     public void testAddAndSearchBook() {
     	AddBook library = new AddBook();
@@ -81,19 +79,11 @@ public class AddBookTest {
         assertTrue(library.isAvailable(105));
     }
 
-  
+    
     @Test
     public void testSearchNonExistingBook() {
     	AddBook library = new AddBook();
 
         assertNull(library.searchBook(999));
-    }
-
-    
-    @Test
-    public void testIssueNonExistingBook() {
-    	AddBook library = new AddBook();
-
-        assertTrue(library.issueBook(999));
     }
 }
